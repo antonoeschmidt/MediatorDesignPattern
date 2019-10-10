@@ -4,9 +4,9 @@ public abstract class Colleague {
     private Mediator mediator;
     private String colleagueID;
 
-    public Colleague(Mediator m, String colleagueID) {
+    public Colleague(Mediator m, String cID) {
         mediator = m;
-        colleagueID = colleagueID;
+        colleagueID = cID;
     }
     public void broadcast(String message, String receiverID) {
         mediator.send(message, receiverID);

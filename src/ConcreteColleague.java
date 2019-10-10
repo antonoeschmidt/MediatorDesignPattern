@@ -1,7 +1,7 @@
 public class ConcreteColleague extends Colleague{
 
-    public ConcreteColleague(Mediator m, String ID) {
-        super(m, ID);
+    public ConcreteColleague(Mediator m, String colleageID) {
+        super(m, colleageID);
     }
 
     /*@Override

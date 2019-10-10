@@ -15,7 +15,8 @@ public class ApplicationMediatorTest {
         mediator = new ApplicationMediator();
         colleague1 = new ConcreteColleague(mediator,"emp1");
         colleague2 = new ConcreteColleague(mediator, "emp2");
-
+        mediator.addColleagues(colleague1);
+        mediator.addColleagues(colleague2);
         String msg = "Send den her";
         String receiverID = "emp2";
 
