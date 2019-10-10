@@ -1,3 +1,3 @@
 public interface Mediator {
-        void send(String message, Colleague colleague);
+        void send(String message, String receiverID);
 }

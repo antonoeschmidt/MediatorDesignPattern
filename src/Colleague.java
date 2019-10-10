@@ -1,14 +1,24 @@
+import com.sun.xml.internal.bind.v2.model.core.ID;
+
 public abstract class Colleague {
     private Mediator mediator;
-    public Colleague(Mediator m) {
+    private String colleagueID;
+
+    public Colleague(Mediator m, String colleagueID) {
         mediator = m;
+        colleagueID = colleagueID;
     }
-    //send a message via the mediator
-    public void send(String message) {
-        mediator.send(message, this);
+    public void broadcast(String message, String receiverID) {
+        mediator.send(message, receiverID);
     }
-    //get access to the mediator
-    public Mediator getMediator() {return mediator;}
+    public Mediator getMediator() {
+        return mediator;
+    }
+
+    public String getColleagueID() {
+        return colleagueID;
+    }
+
     public abstract void receive(String message);
 }
 
