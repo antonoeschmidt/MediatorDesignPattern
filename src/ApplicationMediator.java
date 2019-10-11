@@ -19,7 +19,6 @@ public class ApplicationMediator implements Mediator {
                 col.receive(message);
             }
 
-
         }
     }
 }
